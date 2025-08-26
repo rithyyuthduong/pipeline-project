@@ -11,7 +11,7 @@ pipeline {
         stage('Build'){
             steps {
                 echo 'Fetch the source code from the directory path specified by the environment variable.'
-                echo 'DIRECTORY_PATH: ${env.DIRECTORY_PATH}'
+                echo 'DIRECTORY_PATH: /path/to/code'
                 echo 'Compile the code and generate any necessary artefacts.'
             }
         }
@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy'){
             steps {
                 echo 'Deploy the application to a testing environment specified by the environment varaible'
-                echo 'Testing environment: ${env.TESTING_DIRECTORY}'
+                echo 'Testing environment: SIT223'
             }
         }
 
@@ -45,7 +45,7 @@ pipeline {
 
         stage('Deploy to Production'){
             steps {
-                echo 'Deploy code to the production environment: ${env.PRODUCTION_ENVIRONMENT}'
+                echo 'Deploy code to the production environment: SIT223_LAB'
             }
         }
     }
