@@ -39,7 +39,7 @@ pipeline {
         stage('Approval'){
             steps {
                 echo 'Waiting 10 seconds to simulate manual approval...'
-                sleep time: 10, unit = 'seconds'
+                sleep time: 10, unit = 'SECONDS'
             }
         }
 
